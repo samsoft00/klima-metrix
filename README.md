@@ -4,7 +4,7 @@
 
 > Develop a script in JavaScript / TypeScript, which takes a list campanies and checks them against the existing database in a smart way. Create the testing data by yourself. Additionally think about a concept how this can be improved in the future. Take into consideration, that we are parsing many lists, with hunderts of campanies every day.
 
-### [Answer]: https://github.com/samsoft00/klima-metrix-task/blob/master/src/lib/sanitizeData.ts
+[Link to the script](https://github.com/samsoft00/klima-metrix-task/blob/master/src/lib/sanitizeData.ts)
 
 |                                 Solarized dark                                 |
 | :----------------------------------------------------------------------------: |
