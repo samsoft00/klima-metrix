@@ -5,6 +5,7 @@ import fromArray from 'from2-array';
 import Fuse from 'fuse.js';
 
 import ICompany from '../interfaces/ICompany';
+import Database from './database';
 
 class SanitizeData extends Transform {
   private dataTransform: Function;
@@ -56,23 +57,17 @@ class SanitizeData extends Transform {
 }
 
 const options = {
-  keys: [{ name: 'name', weight: 0.1, threshold: 0.0 }]
+  keys: [{ name: 'label', weight: 0.1, threshold: 0.0 }]
 };
 
-const fuse = new Fuse(
-  [
-    { name: 'Klima.Metrix GmbH', type: 'suply' },
-    { name: 'Abayomi Gm', type: 'suply' }
-  ],
-  options
-);
+const fuse = new Fuse(Database.fetchCompany(), options);
 
 export default (customerData: object[]) => {
   // Promise<ICompany[]>
   fromArray
     .obj(customerData)
     .pipe(
-      new SanitizeData(2, (company: ICompany, enc, push, done) => {
+      new SanitizeData(2, (company: any, enc, push, done) => {
         if (!company) return done();
 
         console.log(company);
@@ -81,8 +76,8 @@ export default (customerData: object[]) => {
 
         if (response.length && response[0]) {
           // Found
-          const { name } = response[0];
-          push(Object.assign(company, name));
+          const firstData = response[0];
+          push(Object.assign(company, { name: firstData.label }));
         } else {
           push(company);
         }

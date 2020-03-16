@@ -1,0 +1,80 @@
+[
+  {
+    "id": 99,
+    "label": "Klima.Metrix GmbH",
+    "country": "germany",
+    "revenue": 65000
+  },
+  {
+    "id": 100,
+    "label": "Microsoft Ltd.",
+    "country": "us",
+    "revenue": 3000
+  },
+  {
+    "id": 101,
+    "label": "Apple",
+    "country": "us",
+    "revenue": 4000
+  },
+  {
+    "id": 102,
+    "label": "Alphabet",
+    "country": "us",
+    "revenue": 5000
+  },
+  {
+    "id": 103,
+    "label": "Facebook",
+    "country": "us",
+    "revenue": 2300
+  },
+  {
+    "id": 104,
+    "label": "Alibaba",
+    "country": "china",
+    "revenue": 5300
+  },
+  {
+    "id": 105,
+    "label": "JPMorgan Chase",
+    "country": "us",
+    "revenue": 7300
+  },
+  {
+    "id": 106,
+    "label": "Visa",
+    "country": "us",
+    "revenue": 8300
+  },
+  {
+    "id": 107,
+    "label": "Royal Dutch Shell",
+    "country": "netherlands",
+    "revenue": 2000
+  },
+  {
+    "id": 108,
+    "label": "Bank of America",
+    "country": "us",
+    "revenue": 10200
+  },
+  {
+    "id": 109,
+    "label": "Nestle",
+    "country": "switzerland",
+    "revenue": 3300
+  },
+  {
+    "id": 110,
+    "label": "Mastercard",
+    "country": "us",
+    "revenue": 4500
+  },
+  {
+    "id": 111,
+    "label": "Samsung Electronics",
+    "country": "south korea",
+    "revenue": 8000
+  }
+]
