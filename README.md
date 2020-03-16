@@ -1,4 +1,10 @@
-# klima-metrix-task
+# klima metrix tasks
+
+## Part 1
+
+> Develop a script in JavaScript / TypeScript, which takes a list campanies and checks them against the existing database in a smart way. Create the testing data by yourself. Additionally think about a concept how this can be improved in the future. Take into consideration, that we are parsing many lists, with hunderts of campanies every day.
+
+### [Answer]: https://github.com/samsoft00/klima-metrix-task/blob/master/src/lib/sanitizeData.ts
 
 |                                 Solarized dark                                 |
 | :----------------------------------------------------------------------------: |
@@ -41,8 +47,6 @@ To analyse a supply chain we are receiving of a list of companies a customer is 
 ```
 
 We need to check if we already have data for every company in the list. One problem is, that the name field is filled out manually on the customer side, so it can contain typos or differnt spelling e.g. MSFT, Microsoft, Microsoft Ltd, Microssoft.
-
-Develop a script in JavaScript / TypeScript, which takes a list campanies and checks them against the existing database in a smart way. Create the testing data by yourself. Additionally think about a concept how this can be improved in the future. Take into consideration, that we are parsing many lists, with hunderts of campanies every day.
 
 ## Part 2
 
