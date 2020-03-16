@@ -1,5 +1,9 @@
 # klima-metrix-task
 
+|                                 Solarized dark                                 |
+| :----------------------------------------------------------------------------: |
+| ![](https://github.com/samsoft00/klima-metrix-task/blob/master/doc/design.png) |
+
 |                                          CSV upload response                                           |                                        Upload status response                                        |
 | :----------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: |
 | ![Upload response](https://github.com/samsoft00/klima-metrix-task/blob/master/doc/upload-response.png) | ![Process Status](https://github.com/samsoft00/klima-metrix-task/blob/master/doc/process-status.png) |
