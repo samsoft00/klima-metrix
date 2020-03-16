@@ -1,8 +1,8 @@
 # klima-metrix-task
 
-|                                            CSV upload response                                            |             Upload status response             |
-| :-------------------------------------------------------------------------------------------------------: | :--------------------------------------------: |
-| ![](https://github.com/samsoft00/klima-metrix-task/blob/master/doc/Screenshot 2020-03-16 at 07.25.24.png) | ![](doc/Screenshot 2020-03-16 at 07.25.34.png) |
+|                                          CSV upload response                                           |                                        Upload status response                                        |
+| :----------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: |
+| ![Upload response](https://github.com/samsoft00/klima-metrix-task/blob/master/doc/upload-response.png) | ![Process Status](https://github.com/samsoft00/klima-metrix-task/blob/master/doc/process-status.png) |
 
 ## Part 1
 
