@@ -1,5 +1,9 @@
 # klima metrix tasks
 
+|                                    System Design                                     |
+| :----------------------------------------------------------------------------------: |
+| ![](https://github.com/samsoft00/klima-metrix-task/blob/master/doc/architecture.png) |
+
 ## Part I
 
 > Develop a script in JavaScript / TypeScript, which takes a list campanies and checks them against the existing database in a smart way. Create the testing data by yourself. Additionally think about a concept how this can be improved in the future. Take into consideration, that we are parsing many lists, with hunderts of campanies every day.
@@ -35,10 +39,6 @@ npm run start:local:worker
 Kindly start redis server for the worker to run.
 
 [Link to sample CSV file](https://github.com/samsoft00/klima-metrix-task/blob/master/doc/robots.csv)
-
-|                                    System Design                                     |
-| :----------------------------------------------------------------------------------: |
-| ![](https://github.com/samsoft00/klima-metrix-task/blob/master/doc/architecture.png) |
 
 |                                          CSV upload response                                           |                                        Upload status response                                        |
 | :----------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: |
