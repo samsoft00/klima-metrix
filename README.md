@@ -1,5 +1,9 @@
 # klima-metrix-task
 
+|                                            CSV upload response                                            |             Upload status response             |
+| :-------------------------------------------------------------------------------------------------------: | :--------------------------------------------: |
+| ![](https://github.com/samsoft00/klima-metrix-task/blob/master/doc/Screenshot 2020-03-16 at 07.25.24.png) | ![](doc/Screenshot 2020-03-16 at 07.25.34.png) |
+
 ## Part 1
 
 Our backend stores profiles of companies, which can be part of a supply chain. The stored objects are looking like this:
