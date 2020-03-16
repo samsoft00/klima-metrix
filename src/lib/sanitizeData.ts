@@ -2,7 +2,7 @@
 /* eslint-disable no-underscore-dangle */
 import { Transform, TransformCallback } from 'stream';
 import fromArray from 'from2-array';
-// import Fuse from 'fuse.js';
+import Fuse from 'fuse.js';
 
 import ICompany from '../interfaces/ICompany';
 
@@ -55,17 +55,17 @@ class SanitizeData extends Transform {
   }
 }
 
-// const options = {
-//   keys: [{ name: 'name', weight: 0.1, threshold: 0.0 }]
-// };
+const options = {
+  keys: [{ name: 'name', weight: 0.1, threshold: 0.0 }]
+};
 
-// const fuse = new Fuse(
-//   [
-//     { name: 'Klima.Metrix GmbH', type: 'suply' },
-//     { name: 'Abayomi Gm', type: 'suply' }
-//   ],
-//   options
-// );
+const fuse = new Fuse(
+  [
+    { name: 'Klima.Metrix GmbH', type: 'suply' },
+    { name: 'Abayomi Gm', type: 'suply' }
+  ],
+  options
+);
 
 export default (customerData: object[]) => {
   // Promise<ICompany[]>
@@ -75,19 +75,17 @@ export default (customerData: object[]) => {
       new SanitizeData(2, (company: ICompany, enc, push, done) => {
         if (!company) return done();
 
-        // console.log(company);
-        console.log('You call SanitizeData');
+        console.log(company);
 
-        // const response = fuse.search(company.name);
-        // console.log(`${company.name} ==> ${response}`);
+        const response = fuse.search(company.name);
 
-        // if (response.length && response[0]) {
-        //   // Found
-        //   const { name } = response[0];
-        //   push(Object.assign(company, name));
-        // } else {
-        //   push(company);
-        // }
+        if (response.length && response[0]) {
+          // Found
+          const { name } = response[0];
+          push(Object.assign(company, name));
+        } else {
+          push(company);
+        }
 
         done();
         return null;
