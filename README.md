@@ -36,9 +36,9 @@ Kindly start redis server for the worker to run.
 
 [Link to sample CSV file](https://github.com/samsoft00/klima-metrix-task/blob/master/doc/robots.csv)
 
-|                                 System Design                                  |
-| :----------------------------------------------------------------------------: |
-| ![](https://github.com/samsoft00/klima-metrix-task/blob/master/doc/design.png) |
+|                                    System Design                                     |
+| :----------------------------------------------------------------------------------: |
+| ![](https://github.com/samsoft00/klima-metrix-task/blob/master/doc/architecture.png) |
 
 |                                          CSV upload response                                           |                                        Upload status response                                        |
 | :----------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: |
