@@ -1,6 +1,6 @@
 # klima metrix tasks
 
-![System Design](https://github.com/samsoft00/klima-metrix-task/blob/master/doc/architecture.png)
+![System Design](https://github.com/samsoft00/klima-metrix-task/blob/master/doc/design.png)
 
 ## Part I
 
