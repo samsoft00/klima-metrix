@@ -3,6 +3,7 @@
 import { Transform, TransformCallback } from 'stream';
 import fromArray from 'from2-array';
 import Fuse from 'fuse.js';
+import log from 'fancy-log';
 
 import ICompany from '../interfaces/ICompany';
 import Database from './database';
@@ -61,13 +62,16 @@ const options = {
   keys: [{ name: 'label', weight: 0.1, threshold: 0.0 }]
 };
 
-const fuse = new Fuse(Database.fetchCompanies(), options);
+const fuse = new Fuse(Database.fetch(), options);
 
 /**
  * Constructor revealing pattern
  */
 export default (customerData: object[]) => {
   // Promise<ICompany[]>
+
+  const output: string[] = [];
+
   fromArray
     .obj(customerData)
     .pipe(
@@ -90,5 +94,7 @@ export default (customerData: object[]) => {
         return null;
       })
     )
-    .on('data', info => console.log(info));
+    .on('data', chunk => output.push(chunk))
+    .on('error', err => log(new Error(err.message)))
+    .on('end', () => console.log(output));
 };

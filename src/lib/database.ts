@@ -11,7 +11,7 @@ export default class Database {
   /**
    * Fetch companies from database
    */
-  static fetchCompanies(): string[] {
+  static fetch(): string[] {
     return JSON.parse(contents);
   }
 
@@ -20,5 +20,5 @@ export default class Database {
    * @param {string} id
    * @param {object} payload
    */
-  static updateCompany(id: string, payload: any) {}
+  static insert(data: any) {}
 }
