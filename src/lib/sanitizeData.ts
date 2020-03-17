@@ -60,7 +60,7 @@ const options = {
   keys: [{ name: 'label', weight: 0.1, threshold: 0.0 }]
 };
 
-const fuse = new Fuse(Database.fetchCompany(), options);
+const fuse = new Fuse(Database.fetchCompanies(), options);
 
 export default (customerData: object[]) => {
   // Promise<ICompany[]>

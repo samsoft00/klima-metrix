@@ -10,6 +10,7 @@ import cors from 'cors';
 import config from 'config';
 
 import routes from './routes';
+import Database from './lib/database';
 
 dotenv.config();
 
@@ -73,5 +74,7 @@ app.use((err, req, res, next) => {
     status: false
   });
 });
+
+console.log(Database.fetchCompanies());
 
 export default app;
