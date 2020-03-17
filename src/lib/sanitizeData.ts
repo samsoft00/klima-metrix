@@ -71,21 +71,21 @@ export default (customerData: object[]) => {
   fromArray
     .obj(customerData)
     .pipe(
-      new SanitizeData(2, (company: any, enc, push, done) => {
-        if (!company) return done();
+      new SanitizeData(2, (data: any, enc, push, done) => {
+        if (!data) return done();
 
-        console.log(company);
-
-        const response: ICompany[] = fuse.search(company.name);
+        let company;
+        const response: ICompany[] = fuse.search(data.name);
 
         if (response.length && response[0]) {
           // Found
           const firstData = response[0];
-          push(Object.assign(company, { name: firstData.label }));
+          company = Object.assign(data, { name: firstData.label });
         } else {
-          push(company);
+          company = data;
         }
 
+        push(company);
         done();
         return null;
       })

@@ -45,3 +45,4 @@ node_modules
 .env
 build/
 .vscode
+src/uploads/*

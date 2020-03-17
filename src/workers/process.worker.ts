@@ -21,6 +21,8 @@ function start() {
   workQueue.process(maxJobsPerWorker, async (jobQueue: Job<IJobQueue>, done) => {
     const { data, processId } = jobQueue.data;
 
+    console.log(`Worker with job ID ${jobQueue.id} started`);
+
     async.series(
       {
         stepOne: callback => {
