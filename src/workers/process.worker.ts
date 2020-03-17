@@ -2,6 +2,7 @@ import Queue, { Job } from 'bull';
 import config from 'config';
 import throng from 'throng';
 import async from 'async';
+import log from 'fancy-log';
 
 import { EProcessStage } from '../enums/EProcessStage';
 import RedisService from '../services/ redis.service';
@@ -21,7 +22,7 @@ function start() {
   workQueue.process(maxJobsPerWorker, async (jobQueue: Job<IJobQueue>, done) => {
     const { data, processId } = jobQueue.data;
 
-    console.log(`Worker with job ID ${jobQueue.id} started`);
+    log(`Worker with job ID ${jobQueue.id} started`);
 
     async.series(
       {
@@ -89,7 +90,7 @@ function start() {
           // Start process 6
           await sanitizeData(data);
 
-          const payload = { stage: EProcessStage.Stage6, endTime: Date() };
+          const payload = { stage: EProcessStage.Stage6, endTime: new Date() };
           await redisService.update(processId, payload);
 
           jobQueue.progress(100);
@@ -97,7 +98,7 @@ function start() {
         }
       },
       (err, result) => {
-        console.log(err, result);
+        log(`Worker with job ID ${jobQueue.id} ended`);
       }
     );
 
