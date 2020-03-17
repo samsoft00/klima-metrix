@@ -22,7 +22,7 @@ class SanitizeData extends Transform {
     this.continueCallback = null;
   }
 
-  _transform(chunk: ICompany, enc: string, done: TransformCallback) {
+  _transform(chunk: any, enc: string, done: TransformCallback) {
     this.running += 1;
     this.dataTransform(chunk, enc, this.push.bind(this), this._onComplete.bind(this));
     if (this.running < this.concurrency) {
@@ -56,12 +56,16 @@ class SanitizeData extends Transform {
   }
 }
 
+// Rules
 const options = {
   keys: [{ name: 'label', weight: 0.1, threshold: 0.0 }]
 };
 
 const fuse = new Fuse(Database.fetchCompanies(), options);
 
+/**
+ * Constructor revealing pattern
+ */
 export default (customerData: object[]) => {
   // Promise<ICompany[]>
   fromArray
@@ -72,7 +76,7 @@ export default (customerData: object[]) => {
 
         console.log(company);
 
-        const response = fuse.search(company.name);
+        const response: ICompany[] = fuse.search(company.name);
 
         if (response.length && response[0]) {
           // Found

@@ -1,5 +1,5 @@
 {
-  "name": "node-typescript-api-starter",
+  "name": "klima-metrix-task",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -15,15 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/samsoft00/node-typescript-api-starter.git"
+    "url": "git+https://github.com/samsoft00/klima-metrix-task.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/samsoft00/node-typescript-api-starter/issues"
+    "url": "https://github.com/samsoft00/klima-metrix-task/issues"
   },
-  "homepage": "https://github.com/samsoft00/node-typescript-api-starter#readme",
+  "homepage": "https://github.com/samsoft00/klima-metrix-task#readme",
   "devDependencies": {
     "@types/async": "^3.0.8",
     "@types/body-parser": "^1.19.0",

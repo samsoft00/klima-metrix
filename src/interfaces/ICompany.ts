@@ -3,6 +3,8 @@
  */
 
 export default interface Company {
-  name: string;
-  type: string;
+  id: number;
+  label: string;
+  country: string;
+  revenue: number;
 }
