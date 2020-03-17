@@ -70,7 +70,7 @@ const fuse = new Fuse(Database.fetch(), options);
 export default (customerData: object[]) => {
   // Promise<ICompany[]>
 
-  const output: string[] = [];
+  const output: object[] = [];
 
   fromArray
     .obj(customerData)
@@ -96,5 +96,5 @@ export default (customerData: object[]) => {
     )
     .on('data', chunk => output.push(chunk))
     .on('error', err => log(new Error(err.message)))
-    .on('end', () => console.log(output));
+    .on('end', () => Database.insert(output));
 };

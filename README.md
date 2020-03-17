@@ -36,7 +36,7 @@ npm run start:local:worker
 
 Kindly start redis server for the worker to run.
 
-[Link to sample CSV file](https://github.com/samsoft00/klima-metrix-task/blob/master/doc/robots.csv)
+[Download sample CSV file](https://github.com/samsoft00/klima-metrix-task/blob/master/doc/robots.csv)
 
 |                                          CSV upload response                                           |                                        Upload status response                                        |
 | :----------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: |

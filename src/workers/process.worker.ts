@@ -22,7 +22,7 @@ function start() {
   workQueue.process(maxJobsPerWorker, async (jobQueue: Job<IJobQueue>, done) => {
     const { data, processId } = jobQueue.data;
 
-    log(`Worker with job ID ${jobQueue.id} started`);
+    log(`Worker with job ID ${jobQueue.id} started at ${new Date()}`);
 
     async.series(
       {
@@ -98,7 +98,7 @@ function start() {
         }
       },
       (err, result) => {
-        log(`Worker with job ID ${jobQueue.id} ended`);
+        log(`Worker with job ID ${jobQueue.id} ended at ${new Date()}`);
       }
     );
 

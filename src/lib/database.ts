@@ -11,7 +11,7 @@ export default class Database {
   /**
    * Fetch companies from database
    */
-  static fetch(): string[] {
+  static fetch(): object[] {
     return JSON.parse(contents);
   }
 
@@ -20,5 +20,7 @@ export default class Database {
    * @param {string} id
    * @param {object} payload
    */
-  static insert(data: any) {}
+  static insert(data: object[]) {
+    console.log(data);
+  }
 }
