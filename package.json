@@ -72,6 +72,7 @@
     "fuse.js": "^4.0.4-beta",
     "get-stream": "^5.1.0",
     "helmet": "^3.21.3",
+    "ioredis": "^4.16.0",
     "lodash": "^4.17.15",
     "lusca": "^1.6.1",
     "moment": "^2.24.0",

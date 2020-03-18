@@ -1,6 +1,6 @@
-import Queue, { Job } from 'bull';
-import config from 'config';
+import { Job } from 'bull';
 import throng from 'throng';
+import config from 'config';
 import async from 'async';
 import log from 'fancy-log';
 
@@ -8,18 +8,16 @@ import { EProcessStage } from '../enums/EProcessStage';
 import RedisService from '../services/ redis.service';
 import IJobQueue from '../interfaces/IJobQueue';
 
+import TaskQueue from '../queue/task.queue';
 import sanitizeData from '../lib/sanitizeData';
 
 const redisService = new RedisService();
 
-const { name, workers } = config.get('queue');
-
+const { workers } = config.get('queue');
 const maxJobsPerWorker = 50;
 
 function start() {
-  const workQueue = new Queue(name, redisService.getClientOpt());
-
-  workQueue.process(maxJobsPerWorker, async (jobQueue: Job<IJobQueue>, done) => {
+  TaskQueue.process(maxJobsPerWorker, async (jobQueue: Job<IJobQueue>, done) => {
     const { data, processId } = jobQueue.data;
 
     log(`Worker with job ID ${jobQueue.id} started at ${new Date()}`);
