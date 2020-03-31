@@ -1,4 +1,4 @@
-# klima metrix tasks
+# klima metrix
 
 ![System Design](https://github.com/samsoft00/klima-metrix-task/blob/master/doc/design.png)
 
